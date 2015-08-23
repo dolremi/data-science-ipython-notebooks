@@ -1,18 +1,20 @@
-# data-science-ipython-notebooks
-
-Continually updated Data Science IPython Notebooks.
-
 <br/>
 <p align="center">
   <img src="https://raw.githubusercontent.com/donnemartin/data-science-ipython-notebooks/master/images/README_1200x800.gif">
 </p>
 
+# data-science-ipython-notebooks
+
+Continually updated Data Science IPython Notebooks.
+
+This repo is a collection of IPython Notebooks I reference while working with data.  Although I developed and maintain most notebooks, some notebooks I reference were created by other authors, who are credited within their notebook(s) by providing their names and/or a link to their source.
+
+For detailed instructions, scripts, and tools to more optimally set up your development environment for data analysis, check out the [dev-setup](https://github.com/donnemartin/dev-setup) repo.
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/donnemartin/data-science-ipython-notebooks/master/images/coversmall_alt.png">
   <br/>
 </p>
-
-This repo is a collection of IPython Notebooks I reference while working with data.  Although I developed and maintain most notebooks, some notebooks I reference were created by other authors, who are credited within their notebook(s) by providing their names and/or a link to their source.
 
 ## Index
 
@@ -21,10 +23,10 @@ This repo is a collection of IPython Notebooks I reference while working with da
 * [amazon web services](#aws)
 * [kaggle-and-business-analyses](#kaggle-and-business-analyses)
 * [scikit-learn](#scikit-learn)
+* [statistical-inference-scipy](#statistical-inference-scipy)
 * [pandas](#pandas)
 * [matplotlib](#matplotlib)
 * [numpy](#numpy)
-* [scipy](#scipy)
 * [python-data](#python-data)
 * [command lines](#commands)
 * [misc](#misc)
@@ -72,6 +74,7 @@ IPython Notebook(s) demonstrating Amazon Web Services (AWS) and AWS tools functi
 
 | Notebook | Description |
 |------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [boto](http://nbviewer.ipython.org/github/donnemartin/data-science-ipython-notebooks/blob/master/aws/aws.ipynb#Boto) | Official AWS SDK for Python. |
 | [s3cmd](http://nbviewer.ipython.org/github/donnemartin/data-science-ipython-notebooks/blob/master/aws/aws.ipynb#s3cmd) | Interacts with S3 through the command line. |
 | [s3distcp](http://nbviewer.ipython.org/github/donnemartin/data-science-ipython-notebooks/blob/master/aws/aws.ipynb#s3distcp) | Combines smaller files and aggregates them together by taking in a pattern and target file.  S3DistCp can also be used to transfer large volumes of data from S3 to your Hadoop cluster. |
 | [s3-parallel-put](http://nbviewer.ipython.org/github/donnemartin/data-science-ipython-notebooks/blob/master/aws/aws.ipynb#s3-parallel-put) | Uploads multiple files to S3 in parallel. |
@@ -116,6 +119,20 @@ IPython Notebook(s) demonstrating scikit-learn functionality.
 
 <br/>
 <p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/data-science-ipython-notebooks/master/images/scipy.png">
+</p>
+
+## statistical-inference-scipy
+
+| Notebook | Description |
+|--------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| scipy | SciPy is a collection of mathematical algorithms and convenience functions built on the Numpy extension of Python. It adds significant power to the interactive Python session by providing the user with high-level commands and classes for manipulating and visualizing data. |
+| [effect_size](http://nbviewer.ipython.org/github/donnemartin/data-science-ipython-notebooks/blob/master/scipy/effect_size.ipynb) | Effect size. |
+| [sampling](http://nbviewer.ipython.org/github/donnemartin/data-science-ipython-notebooks/blob/master/scipy/sampling.ipynb) | Random sampling. |
+| [hypothesis](http://nbviewer.ipython.org/github/donnemartin/data-science-ipython-notebooks/blob/master/scipy/hypothesis.ipynb) | Hypothesis testing. |
+
+<br/>
+<p align="center">
   <img src="https://raw.githubusercontent.com/donnemartin/data-science-ipython-notebooks/master/images/pandas.png">
 </p>
 
@@ -153,15 +170,6 @@ IPython Notebook(s) demonstrating NumPy functionality.
 | Notebook | Description |
 |--------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [numpy](http://nbviewer.ipython.org/github/donnemartin/data-science-ipython-notebooks/blob/master/numpy/numpy.ipynb) | Adds Python support for large, multi-dimensional arrays and matrices, along with a large library of high-level mathematical functions to operate on these arrays. |
-
-<br/>
-<p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/data-science-ipython-notebooks/master/images/scipy.png">
-</p>
-
-## scipy
-
-[Coming Soon] IPython Notebook(s) demonstrating SciPy functionality.
 
 <br/>
 <p align="center">
@@ -211,24 +219,37 @@ IPython Notebook(s) demonstrating miscellaneous functionality.
 
 ## notebook-installation
 
+### anaconda
+
 Anaconda is a free distribution of the Python programming language for large-scale data processing, predictive analytics, and scientific computing that aims to simplify package management and deployment.
 
 Follow instructions to install [Anaconda](http://docs.continuum.io/anaconda/install.html) or the more lightweight [miniconda](http://conda.pydata.org/miniconda.html).
+
+### pip-requirements
+
+If you prefer to use a more lightweight installation procedure than Anaconda, first clone the repo then run the following pip command on the provided requirements.txt file:
+
+    $ pip install -r requirements.txt
+
+### running-notebooks
 
 To view interactive content or to modify elements within the IPython notebooks, you must first clone or download the repository then run the ipython notebook.  More information on IPython Notebooks can be found [here.](http://ipython.org/notebook.html)
 
 ```
 $ git clone https://github.com/donnemartin/data-science-ipython-notebooks.git
-$ cd [downloaded repo directory name]
+$ cd data-science-ipython-notebooks
 $ ipython notebook
 ```
+
+Notebooks tested with Python 2.7.x.
 
 ## credits
 
 * [Python for Data Analysis: Data Wrangling with Pandas, NumPy, and IPython](http://www.amazon.com/Python-Data-Analysis-Wrangling-IPython/dp/1449319793) by Wes McKinney
 * [PyCon 2015 Scikit-learn Tutorial](https://github.com/jakevdp/sklearn_pycon2015) by Jake VanderPlas
 * [Parallel Machine Learning with scikit-learn and IPython](https://github.com/ogrisel/parallel_ml_tutorial) by Olivier Grisel
-* [Yhat blog](http://blog.yhathq.com/) by Yhat
+* [Statistical Interference Using Computational Methods in Python](https://github.com/AllenDowney/CompStats) by Allen Downey
+* [Yhat Blog](http://blog.yhathq.com/) by Yhat
 * [Kaggle](https://www.kaggle.com/) by Kaggle
 * [Spark Docs](https://spark.apache.org/docs/latest/) by Apache Spark
 * [AWS Docs](http://aws.amazon.com/documentation/) by Amazon Web Services
